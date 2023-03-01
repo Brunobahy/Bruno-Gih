@@ -1,0 +1,14 @@
+.calendario{
+    width: 90%;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.titulo{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--chumbo);
+    text-align: center;
+    margin: 20px 0;
+}
