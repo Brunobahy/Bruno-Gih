@@ -7,10 +7,10 @@ import Banner from 'componentes/Banner'
 export default function PaginaInicial() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y:0 }}
+      animate={{ opacity: 1, y:0 }}
     >
-      <Banner  />
+      <Banner />
       <Calendario />
     </motion.div>
   )
