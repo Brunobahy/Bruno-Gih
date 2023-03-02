@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Cabecalho.module.css'
-import { AnimatePresence, delay, motion, spring, useAnimationControls, useWillChange } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 export default function Cabecalho() {
@@ -19,7 +19,7 @@ export default function Cabecalho() {
             transition: { type: "spring", bounce: 0 },
         },
         aparece: {
-            y: 0,
+            y: -1,
             transition: { type: "spring", bounce: 0 },
 
 
@@ -56,7 +56,7 @@ export default function Cabecalho() {
                                 <NavLink onClick={abrir} className={styles.item} to={'/fotos'}>Fotos</NavLink>
                             </li>
                             <li>
-                                <NavLink onClick={abrir} className={styles.item} to={'/atividades'}>Atividades</NavLink>
+                                <NavLink onClick={abrir} className={styles.item} to={'/historias'}>Historias</NavLink>
                             </li>
                         </motion.nav>
                         : ''

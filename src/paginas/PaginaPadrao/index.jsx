@@ -7,7 +7,6 @@ export default function PaginaPadrao() {
         <div>
             <Cabecalho />
             <Outlet />
-
         </div>
     )
 }

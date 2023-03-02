@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styles from "./Fotos.module.css"
-import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import listaFotos from 'json/fotos.json'
 
+export default function Fotos({local}) {
+    console.log(local)
 
-export default function Fotos() {
-
-    const animacao = useAnimationControls()
 
     const [imagemEscolhida, setImagemEscolhida] = useState()
 
     return (
-        <ul
+        <motion.ul
+            initial={{opacity: 0, scale: 0}}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{opacity: 0, scale: 0}}
             className={styles.container}
         >
             {listaFotos.length > 1
@@ -58,6 +60,6 @@ export default function Fotos() {
                     : ''
                 }
             </AnimatePresence>
-        </ul>
+        </motion.ul>
     )
 }
