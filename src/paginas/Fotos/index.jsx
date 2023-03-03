@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 import styles from "./Fotos.module.css"
 import { AnimatePresence, motion } from 'framer-motion'
-<<<<<<< HEAD
+
 import PaginaInicial from 'paginas/PaginaInicial'
-=======
-import listaFotos from 'json/fotos.json'
+
 
 export default function Fotos({local}) {
     console.log(local)
-
->>>>>>> 901432d01d637e6cb8aee07167b12a6deb96a55e
 
 export default function Fotos({ lista }) {
     const [imagemEscolhida, setImagemEscolhida] = useState()
@@ -24,11 +21,10 @@ export default function Fotos({ lista }) {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-=======
             initial={{opacity: 0, scale: 0}}
             animate={{ opacity: 1, scale: 1 }}
             exit={{opacity: 0, scale: 0}}
->>>>>>> 901432d01d637e6cb8aee07167b12a6deb96a55e
+
             className={styles.container}
         >
             {lista.map((item, index) => {
