@@ -1,50 +1,56 @@
 import React, { useState } from 'react'
 import styles from "./Fotos.module.css"
 import { AnimatePresence, motion } from 'framer-motion'
+<<<<<<< HEAD
+import PaginaInicial from 'paginas/PaginaInicial'
+=======
 import listaFotos from 'json/fotos.json'
 
 export default function Fotos({local}) {
     console.log(local)
 
+>>>>>>> 901432d01d637e6cb8aee07167b12a6deb96a55e
 
+export default function Fotos({ lista }) {
     const [imagemEscolhida, setImagemEscolhida] = useState()
+
+    if (!lista) {
+        return (<PaginaInicial />)
+    }
 
     return (
         <motion.ul
+<<<<<<< HEAD
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+=======
             initial={{opacity: 0, scale: 0}}
             animate={{ opacity: 1, scale: 1 }}
             exit={{opacity: 0, scale: 0}}
+>>>>>>> 901432d01d637e6cb8aee07167b12a6deb96a55e
             className={styles.container}
         >
-            {listaFotos.length > 1
-                ? listaFotos.map(foto => {
-                    if (foto.id !== imagemEscolhida) {
-                        return (
-                            <li
-                                onClick={() => setImagemEscolhida(foto.id)}
-                                key={foto.id}
-                                className={styles.item}
-                            >
-                                <div className={styles.foto}>
-                                    <img src={`/assets/fotos/${foto.id}.png`} alt="" />
-                                </div>
-                                <div className={styles.legenda}>
-                                    <h2 className={styles.titulo}>{foto.titulo}</h2>
-                                    <p className={styles.subtitulo}>{foto.subtitulo}</p>
-                                </div>
+            {lista.map((item, index) => {
+                if (item.TituloFoto !== imagemEscolhida) {
+                    return (
+                        <li
+                            onClick={() => setImagemEscolhida(item)}
+                            key={index}
+                            className={styles.item}
+                        >
+                            <div className={styles.foto}>
+                                <img src={item.Foto.replace('open', 'uc')} alt="" />
+                            </div>
+                            <div className={styles.legenda}>
+                                <h2 className={styles.titulo}>{item.TituloFoto}</h2>
+                                <p className={styles.subtitulo}>{item.InfoFoto}</p>
+                            </div>
 
-                            </li>
-                        )
-                    }
-                })
-                : <li className={styles.item}>
-                    <img className={styles.foto} src="/assets/fotos/0.png" alt="" />
-                    <div className={styles.legenda}>
-                        <h2 className={styles.titulo}>Sem Imagens</h2>
-                        <p className={styles.subtitulo}>Envie para o Bruno Bahy para aparecer aqui</p>
-                    </div>
-                </li>
-            }
+                        </li>
+                    )
+                }
+            })}
             <AnimatePresence>
                 {imagemEscolhida
                     ? <motion.div
@@ -54,8 +60,9 @@ export default function Fotos({local}) {
                         className={styles.escolhida}
                     >
 
-                        <img src={`/assets/fotos/${imagemEscolhida}.png`} alt="" onClick={() => setImagemEscolhida('')} />
-
+                        <img src={imagemEscolhida.Foto.replace('open', 'uc')} alt="" onClick={() => setImagemEscolhida('')} />
+                        <h2>{imagemEscolhida.TituloFoto}</h2>
+                        <p>{imagemEscolhida.InfoFoto}</p>
                     </motion.div>
                     : ''
                 }
