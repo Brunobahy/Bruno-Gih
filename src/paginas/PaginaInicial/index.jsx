@@ -5,13 +5,7 @@ import Banner from 'componentes/Banner'
 import { useLocation } from 'react-router-dom'
 
 
-export default function PaginaInicial({ funcao }) {
-  let local = useLocation().pathname
-
-  useEffect(() => {
-    funcao(local)
-  }, [])
-
+export default function PaginaInicial() {
   return (
     <motion.div
       key={'calendario'}

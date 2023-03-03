@@ -1,14 +1,7 @@
-<<<<<<< HEAD
+
 .lista{
     margin: 50px 0;
     display: flex;
     flex-direction: column;
     gap: 50px;
-=======
-.lista{
-    margin: 50px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
->>>>>>> 901432d01d637e6cb8aee07167b12a6deb96a55e
 }

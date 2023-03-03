@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import styles from './Historias.module.css'
 import Banner from 'componentes/Banner'
-import historias from 'json/historias'
 import CardHistoria from 'componentes/CardHistoria'
-import { useLocation } from 'react-router-dom'
 
-export default function Historias({ funcao }) {
+export default function Historias({lista}) {
 
-    let local = useLocation().pathname
 
-    useEffect(() => {
-        funcao(local)
-    }, [])
 
     return (
         <motion.div
@@ -24,8 +18,8 @@ export default function Historias({ funcao }) {
             <Banner texto='Histórias' />
 
             <ul className={styles.lista}>
-                {historias.map((historia, index) =>
-                    <CardHistoria key={index} titulo={historia.titulo} texto={historia.texto} />)
+                {lista.map((item, index) =>
+                    <CardHistoria key={index} titulo={item.TituloHistoria} texto={item.Historia} />)
                 }
             </ul>
         </motion.div>
