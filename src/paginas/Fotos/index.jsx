@@ -17,7 +17,6 @@ export default function Fotos({ lista }) {
 
     return (
         <motion.ul
-<<<<<<< HEAD
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
