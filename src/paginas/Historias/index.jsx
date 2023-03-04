@@ -11,7 +11,7 @@ export default function Historias({lista}) {
     return (
         <motion.div
             initial={{ x: '100vw' }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0, width: '100%' }}
             key={'historias'}
             exit={{ x: '100vw' }}
         >
