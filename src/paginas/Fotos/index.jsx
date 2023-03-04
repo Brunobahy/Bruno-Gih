@@ -13,7 +13,11 @@ export default function Fotos({lista}) {
     }
 
     return (
-        <ul
+        <motion.ul
+            initial={{ x: '100vw' }}
+            animate={{ opacity: 1, x: 0, width:'100%'}}
+            key={'historias'}
+            exit={{ x: '100vw' }}
             className={styles.container}
         >
             {lista.map((item, index) => {
@@ -52,6 +56,6 @@ export default function Fotos({lista}) {
                     : ''
                 }
             </AnimatePresence>
-        </ul>
+        </motion.ul>
     )
 }
