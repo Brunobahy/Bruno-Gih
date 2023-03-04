@@ -14,10 +14,10 @@ export default function Fotos({lista}) {
 
     return (
         <motion.ul
-            initial={{ x: '100vw' }}
-            animate={{ opacity: 1, x: 0, width:'100%'}}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1}}
+            exit={{ scale: 0, opacity: 0 }}
             key={'historias'}
-            exit={{ x: '100vw' }}
             className={styles.container}
         >
             {lista.map((item, index) => {
