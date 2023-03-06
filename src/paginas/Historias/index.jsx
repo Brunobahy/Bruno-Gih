@@ -19,7 +19,7 @@ export default function Historias({lista}) {
 
             <ul className={styles.lista}>
                 {lista.map((item, index) =>
-                    <CardHistoria key={index} titulo={item.TituloHistoria} texto={item.Historia} />)
+                    <CardHistoria key={index} titulo={item.Titulo_Historia} texto={item.Historia} />)
                 }
             </ul>
         </motion.div>
