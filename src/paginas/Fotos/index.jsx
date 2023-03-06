@@ -32,8 +32,8 @@ export default function Fotos({lista}) {
                                 <img src={item.Foto.replace('open', 'uc')} alt="" />
                             </div>
                             <div className={styles.legenda}>
-                                <h2 className={styles.titulo}>{item.Titulo-Foto}</h2>
-                                <p className={styles.subtitulo}>{item.Info-foto}</p>
+                                <h2 className={styles.titulo}>{item.Titulo_Foto}</h2>
+                                <p className={styles.subtitulo}>{item.Info_foto}</p>
                             </div>
 
                         </li>
