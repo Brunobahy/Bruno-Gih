@@ -21,7 +21,7 @@ export default function Fotos({lista}) {
             className={styles.container}
         >
             {lista.map((item, index) => {
-                if (item.TituloFoto !== imagemEscolhida) {
+                if (item.Titulo_Foto !== imagemEscolhida) {
                     return (
                         <li
                             onClick={() => setImagemEscolhida(item)}
