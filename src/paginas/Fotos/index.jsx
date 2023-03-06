@@ -50,8 +50,8 @@ export default function Fotos({lista}) {
                     >
 
                         <img src={imagemEscolhida.Foto.replace('open', 'uc')} alt="" onClick={() => setImagemEscolhida('')} />
-                        <h2>{imagemEscolhida.TituloFoto}</h2>
-                        <p>{imagemEscolhida.InfoFoto}</p>
+                        <h2>{imagemEscolhida.Titulo_Foto}</h2>
+                        <p>{imagemEscolhida.Info_Foto}</p>
                     </motion.div>
                     : ''
                 }
