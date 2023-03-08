@@ -1,8 +1,6 @@
 .pagina{
     background-color: var(--chumbo);
-    height: 100%;
     position: absolute;
-    width: 100%;
 }
 
 .info{
