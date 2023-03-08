@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import Calendario from 'componentes/Calendario'
 import Banner from 'componentes/Banner'
-import { useLocation } from 'react-router-dom'
 
 
 export default function PaginaInicial() {

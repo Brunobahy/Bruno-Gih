@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import styles from "./Fotos.module.css"
-import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import PaginaInicial from 'paginas/PaginaInicial'
+import CardFoto from 'componentes/CardFoto'
 
 
-export default function Fotos({lista}) {
+export default function Fotos({ lista }) {
 
     const [imagemEscolhida, setImagemEscolhida] = useState()
 
@@ -15,7 +16,7 @@ export default function Fotos({lista}) {
     return (
         <motion.ul
             initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1}}
+            animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             key={'historias'}
             className={styles.container}
@@ -23,20 +24,11 @@ export default function Fotos({lista}) {
             {lista.map((item, index) => {
                 if (item.Titulo_Foto !== imagemEscolhida) {
                     return (
-                        <li
-                            onClick={() => setImagemEscolhida(item)}
+                        <CardFoto
+                            funcao={setImagemEscolhida}
                             key={index}
-                            className={styles.item}
-                        >
-                            <div className={styles.foto}>
-                                <img src={item.Foto.replace('open', 'uc')} alt="" />
-                            </div>
-                            <div className={styles.legenda}>
-                                <h2 className={styles.titulo}>{item.Titulo_Foto}</h2>
-                                <p className={styles.subtitulo}>{item.Info_foto}</p>
-                            </div>
-
-                        </li>
+                            {...item}
+                        />
                     )
                 }
             })}

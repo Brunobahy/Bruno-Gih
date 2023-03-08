@@ -1,0 +1,43 @@
+.pagina{
+    background-color: var(--chumbo);
+    height: 100vh;
+}
+
+.info{
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--amarelo-1);
+    padding: 20px;
+}
+
+.titulo{
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0;
+    background-color: var(--amarelo-1);
+    color: var(--chumbo);
+    border: 3px solid var(--rosa);
+    border-left: 0;
+    border-right: 0;
+    padding: 10px;
+}
+
+.texto{
+    font-size: 20px;
+    text-align: center;
+    margin: 0 20px;
+    font-weight: 700;
+    color: var(--rosa);
+    line-height: 30px;
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    color: var(--cinza);
+    list-style: decimal;
+    gap: 10px;
+    width: 80%;
+    margin: 20px auto;
+}

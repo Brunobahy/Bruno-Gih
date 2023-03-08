@@ -1,4 +1,5 @@
 import { AnimatePresence } from 'framer-motion';
+import Eventos from 'paginas/Eventos';
 import Historias from 'paginas/Historias';
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
@@ -27,6 +28,7 @@ function AppRouter() {
           <Route path='/' element={<PaginaPadrao />}>
             <Route index element={<PaginaInicial />} />
             <Route path='/fotos' element={<Fotos lista={lista} />} />
+            <Route path='/eventos' element={<Eventos />} />
             <Route path='/historias' element={<Historias lista={lista} />} />
           </Route>
         </Routes>

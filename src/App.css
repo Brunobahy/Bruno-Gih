@@ -85,8 +85,7 @@ video {
 	font-size: 100%;
 	vertical-align: baseline;
 	font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-
+	box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -131,4 +130,7 @@ table {
 	border-spacing: 0;
 }
 
-*{font-family: 'Montserrat', sans-serif;}
+* {
+	font-family: 'Montserrat', sans-serif;
+
+}

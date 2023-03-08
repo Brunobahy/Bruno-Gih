@@ -58,6 +58,9 @@ export default function Cabecalho() {
                             <li>
                                 <NavLink onClick={abrir} className={styles.item} to={'/historias'}>Historias</NavLink>
                             </li>
+                            <li>
+                                <NavLink onClick={abrir} className={styles.item} to={'/eventos'}>Eventos</NavLink>
+                            </li>
                         </motion.nav>
                         : ''
                 }
