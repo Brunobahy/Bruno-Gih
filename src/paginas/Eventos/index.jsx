@@ -14,7 +14,7 @@ export default function Eventos() {
 
             <div>
                 <h3 className={styles.titulo}>Dia da mulher</h3>
-                <p className={styles.texto}>Você já recebeu seu convite e seu pix de R$30,00 agora você tem que seguir os seguintes itens para concluir este evento de modo correto e ganhar o vale maçagem!</p>
+                <p className={styles.texto}>Você já recebeu seu convite e seu pix de R$30,00 agora você tem que seguir os seguintes itens para concluir este evento de modo correto e ganhar o vale massagem!</p>
                 <ul className={styles.lista}>
                     <li className={styles.item}>Vá ao mercado</li>
                     <li className={styles.item}>Compre pipoca e coiasas que queira comer</li>
